@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(25, 15, 35, 0.45),
+                    rgba(20, 10, 30, 0.75)
+                ),
+                #3b2945;
+
+            padding: 30px 15px;
+
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+
+        /* TITLE */
+
+        .intro {
+
+            padding: 30px 10px;
+
+        }
+
+
+        .intro h1 {
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(42px, 9vw, 65px);
+
+            font-weight: normal;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .intro p {
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            opacity: 0.9;
+
+        }
+
+
+        /* PHOTOS */
+
+        .photos {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .photos img {
+
+            width: 100%;
+
+            height: 230px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            display: block;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25);
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+        .photos img:hover {
+
+            transform: scale(1.02);
+
+        }
+
+
+        /* FIRST PHOTO */
+
+        .photos img:first-child {
+
+            grid-column: span 2;
+
+            height: 330px;
+
+        }
+
+
+        /* COUNTDOWN */
+
+        .countdown-box {
+
+            padding: 28px 15px;
+
+            margin-bottom: 30px;
+
+            border-radius: 22px;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
+
+        }
+
+
+        .countdown-box h2 {
+
+            font-family: Georgia, serif;
+
+            font-weight: normal;
+
+            font-size: 23px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .date {
+
+            font-size: 13px;
+
+            opacity: 0.65;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .countdown {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+        }
+
+
+        .time {
+
+            width: 90px;
+
+            padding: 15px 5px;
+
+            border-radius: 14px;
+
+            background: rgba(255, 255, 255, 0.10);
+
+        }
+
+
+        .time span {
+
+            display: block;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .time small {
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            opacity: 0.6;
+
+        }
+
+
+        /* MESSAGE */
+
+        .message {
+
+            padding: 20px 15px 35px;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+        }
+
+
+        .message .love {
+
+            margin-top: 22px;
+
+            font-family: Georgia, serif;
+
+            font-size: 26px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            font-size: 12px;
+
+            opacity: 0.5;
+
+            padding-bottom: 20px;
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 500px) {
+
+
+            body {
+
+                padding: 15px 10px;
+
+            }
+
+
+            .intro {
+
+                padding: 25px 10px;
+
+            }
+
+
+            .photos {
+
+                gap: 8px;
+
+            }
+
+
+            .photos img {
+
+                height: 180px;
+
+                border-radius: 14px;
+
+            }
+
+
+            .photos img:first-child {
+
+                height: 270px;
+
+            }
+
+
+            .countdown {
+
+                gap: 6px;
+
+            }
+
+
+            .time {
+
+                width: 75px;
+
+                padding: 13px 3px;
+
+            }
+
+
+            .time span {
+
+                font-size: 23px;
+
+            }
+
+
+            .time small {
+
+                font-size: 9px;
+
+            }
+
+
+            .message {
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- TITLE -->
+
+    <section class="intro">
+
+        <h1>I'll Miss You</h1>
+
+        <p>
+
+            Ingat ka palagi, love.
+
+            <br>
+
+            Enjoy kayo dun.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- PHOTOS -->
+
+    <section class="photos">
+
+        <img src="photo3.jpg" alt="Our memory">
+
+        <img src="photo2.jpg" alt="Our memory">
+
+        <img src="photo1.jpg" alt="Our memory">
+
+        <img src="photo4.jpg" alt="Our memory">
+
+        <img src="photo5.jpg" alt="Our memory">
+
+    </section>
+
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="countdown-box">
+
+        <h2>See you on September 12</h2>
+
+        <p class="date">
+
+            Counting the days until you're back.
+
+        </p>
+
+
+        <div class="countdown">
+
+
+            <div class="time">
+
+                <span id="days">00</span>
+
+                <small>Days</small>
+
+            </div>
+
+
+            <div class="time">
+
+                <span id="hours">00</span>
+
+                <small>Hours</small>
+
+            </div>
+
+
+            <div class="time">
+
+                <span id="minutes">00</span>
+
+                <small>Minutes</small>
+
+            </div>
+
+
+            <div class="time">
+
+                <span id="seconds">00</span>
+
+                <small>Seconds</small>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MESSAGE -->
+
+    <section class="message">
+
+        <p>
+
+            Ingat kayo, love.
+
+            <br>
+
+            Enjoy po kayo dun. Sana maging okay at masaya
+
+            yung stay niyo dun.
+
+            <br><br>
+
+            Mamimiss po kita superrrrrr
+            
+            <br><br>
+
+            Ingat po palagi, love.
+
+            <br>
+
+            Hintayin po kita.
+
+        </p>
+
+
+        <div class="love">
+
+            I LOVE YOU.
+
+        </div>
+
+    </section>
+
+
+
+
+</div>
+
+
+
+<script>
+
+
+    /*
+       SEPTEMBER 12, 2026
+
+       Since walang exact time,
+       countdown ends at 12:00 AM.
+    */
+
+
+    const returnDate = new Date(
+
+        "September 12, 2026 00:00:00"
+
+    ).getTime();
+
+
+
+    function updateCountdown() {
+
+
+        const now = new Date().getTime();
+
+
+        const difference = returnDate - now;
+
+
+
+        /*
+
+           Kapag September 12 na:
+
+        */
+
+
+        if (difference <= 0) {
+
+
+            document.querySelector(".countdown").innerHTML = `
+
+                <div style="
+
+                    width:100%;
+
+                    font-size:22px;
+
+                    padding:10px;
+
+                ">
+
+                    You're finally coming home.
+
+                </div>
+
+            `;
+
+
+            return;
+
+        }
+
+
+
+        const days = Math.floor(
+
+            difference /
+
+            (1000 * 60 * 60 * 24)
+
+        );
+
+
+
+        const hours = Math.floor(
+
+            (difference %
+
+            (1000 * 60 * 60 * 24))
+
+            /
+
+            (1000 * 60 * 60)
+
+        );
+
+
+
+        const minutes = Math.floor(
+
+            (difference %
+
+            (1000 * 60 * 60))
+
+            /
+
+            (1000 * 60)
+
+        );
+
+
+
+        const seconds = Math.floor(
+
+            (difference %
+
+            (1000 * 60))
+
+            /
+
+            1000
+
+        );
+
+
+
+        document.getElementById("days").textContent =
+
+            String(days).padStart(2, "0");
+
+
+
+        document.getElementById("hours").textContent =
+
+            String(hours).padStart(2, "0");
+
+
+
+        document.getElementById("minutes").textContent =
+
+            String(minutes).padStart(2, "0");
+
+
+
+        document.getElementById("seconds").textContent =
+
+            String(seconds).padStart(2, "0");
+
+    }
+
+
+
+    updateCountdown();
+
+
+    setInterval(updateCountdown, 1000);
+
+
+</script>
+
+
+</body>
+
+</html>
